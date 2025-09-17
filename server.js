@@ -1,4 +1,4 @@
-import 'dotenv/config';
+eimport 'dotenv/config';
 import express from 'express';
 import cors from 'cors';
 import multer from 'multer';
@@ -51,7 +51,7 @@ app.post('/tts', async (req, res) => {
     const text = (req.body.text || '').slice(0, 1000);
     const audio = await openai.audio.speech.create({
       model: 'gpt-4o-mini-tts',
-      voice: 'alloy',
+      voice: 'verse',
       format: 'mp3',
       input: text
     });
